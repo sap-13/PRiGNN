@@ -1,0 +1,14 @@
+artifact_uri: file:///Users/School/Desktop/pr-gnn-master/results/mlflow/593500124138087085/7da74497b7704bf9b2b195068e0064cf/artifacts
+end_time: 1756959454992
+entry_point_name: ''
+experiment_id: '593500124138087085'
+lifecycle_stage: active
+run_id: 7da74497b7704bf9b2b195068e0064cf
+run_name: round_002
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1756959454959
+status: 3
+tags: []
+user_id: School
