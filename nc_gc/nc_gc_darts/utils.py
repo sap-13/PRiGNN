@@ -18,6 +18,10 @@ from torch_geometric.data import DataLoader, Data
 from collections import Counter
 from sklearn.model_selection import train_test_split
 from log import *
+import ssl
+
+# Monkey patch to bypass SSL verification for dataset downloads
+ssl._create_default_https_context = ssl._create_unverified_context
 
 
 def check(args):

@@ -1,0 +1,8 @@
+2025-09-04 16:59:54,858 - root - INFO - Create log file at experimental_results/IMDB-BINARY/1757019594.8561652.log
+2025-09-04 16:59:54,858 - root - INFO - Command line executed: python nc_gc/nc_gc_darts/main.py --dataset IMDB-BINARY --seed 2048 --log_dir experimental_results/
+2025-09-04 16:59:54,859 - root - INFO - Full args parsed:
+2025-09-04 16:59:54,859 - root - INFO - Namespace(train_ratio=0.6, val_ratio=0.2, test_ratio=0.2, model='Auto-GNN', metric='acc', gpu=0, directed=False, parallel=False, optimizer='adam', task='graph', dataset='IMDB-BINARY', seed=2048, clip=0.1, epoch=20, retrain_epoch=100, layers=4, hidden_features=64, bs=128, lr=0.0005, l2=0.0001, dropout=0, log_dir='experimental_results/', summary_file='result_summary.log', debug=False, use_llm_pruning=False, gcp_project_id=None, gcp_location='us-central1', gcp_credentials_path=None)
+2025-09-04 16:59:54,877 - fsspec.local - DEBUG - open file: /Users/School/Documents/AutoGEL-main/data/graph/IMDB-BINARY/IMDB-BINARY/processed/data.pt
+2025-09-04 16:59:54,884 - root - INFO - Input dimensions :1, output dimensions :2
+2025-09-04 16:59:54,951 - root - INFO - Model: Auto-GNN, #layers: 4, in_features: 1, hidden_features: 64, out_features: 2
+2025-09-04 16:59:55,733 - root - INFO - epoch 0 best val acc: 0.5600, train loss: 0.6671; train acc: 0.5667 val acc: 0.5600
