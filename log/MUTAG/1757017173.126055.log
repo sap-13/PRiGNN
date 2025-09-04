@@ -1,0 +1,7 @@
+2025-09-04 16:19:33,126 - root - INFO - Create log file at ./log/MUTAG/1757017173.126055.log
+2025-09-04 16:19:33,126 - root - INFO - Command line executed: python nc_gc/nc_gc_darts/main.py --dataset MUTAG --use_llm_pruning --seed 42 --gcp_project_id test-project
+2025-09-04 16:19:33,126 - root - INFO - Full args parsed:
+2025-09-04 16:19:33,126 - root - INFO - Namespace(train_ratio=0.6, val_ratio=0.2, test_ratio=0.2, model='Auto-GNN', metric='acc', gpu=0, directed=False, parallel=False, optimizer='adam', task='graph', dataset='MUTAG', seed=42, clip=0.1, epoch=20, retrain_epoch=100, layers=4, hidden_features=64, bs=128, lr=0.0005, l2=0.0001, dropout=0, log_dir='./log/', summary_file='result_summary.log', debug=False, use_llm_pruning=True, gcp_project_id='test-project', gcp_location='us-central1', gcp_credentials_path=None)
+2025-09-04 16:19:33,133 - fsspec.local - DEBUG - open file: /Users/School/Documents/AutoGEL-main/data/graph/MUTAG/MUTAG/processed/data.pt
+2025-09-04 16:19:33,142 - root - INFO - Input dimensions :7, output dimensions :2
+2025-09-04 16:19:33,195 - root - INFO - Model: Auto-GNN, #layers: 4, in_features: 7, hidden_features: 64, out_features: 2
