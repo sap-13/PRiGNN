@@ -1,0 +1,137 @@
+2025-09-04 18:17:49,154 - root - INFO - Create log file at experimental_results/Cora/1757024269.15386.log
+2025-09-04 18:17:49,154 - root - INFO - Command line executed: python nc_gc/nc_gc_darts/main.py --dataset Cora --task node --seed 42 --log_dir experimental_results/
+2025-09-04 18:17:49,154 - root - INFO - Full args parsed:
+2025-09-04 18:17:49,154 - root - INFO - Namespace(train_ratio=0.6, val_ratio=0.2, test_ratio=0.2, model='Auto-GNN', metric='acc', gpu=0, directed=False, parallel=False, optimizer='adam', task='node', dataset='Cora', seed=42, clip=0.1, epoch=20, retrain_epoch=100, layers=4, hidden_features=64, bs=128, lr=0.0005, l2=0.0001, dropout=0, log_dir='experimental_results/', summary_file='result_summary.log', debug=False, use_llm_pruning=False, gcp_project_id=None, gcp_location='us-central1', gcp_credentials_path=None)
+2025-09-04 18:17:49,164 - fsspec.local - DEBUG - open file: /Users/School/Documents/AutoGEL-main/data/node/Cora/Cora/processed/data.pt
+2025-09-04 18:17:49,173 - root - INFO - Input dimensions :1433, output dimensions :7
+2025-09-04 18:17:49,173 - root - INFO - Train size :1624, val size: 542, test size: 542, val ratio: 0.2, test ratio: 0.2
+2025-09-04 18:17:49,220 - root - INFO - Model: Auto-GNN, #layers: 4, in_features: 1433, hidden_features: 64, out_features: 7
+2025-09-04 18:17:49,463 - root - INFO - epoch 0 best val acc: 0.3395, train loss: 1.8779; train acc: 0.2752 val acc: 0.3395
+2025-09-04 18:17:49,605 - root - INFO - epoch 1 best val acc: 0.3413, train loss: 1.8411; train acc: 0.2752 val acc: 0.3413
+2025-09-04 18:17:49,770 - root - INFO - epoch 2 best val acc: 0.3413, train loss: 1.8096; train acc: 0.2752 val acc: 0.3413
+2025-09-04 18:17:49,902 - root - INFO - epoch 3 best val acc: 0.3450, train loss: 1.7734; train acc: 0.2759 val acc: 0.3450
+2025-09-04 18:17:50,171 - root - INFO - epoch 4 best val acc: 0.3708, train loss: 1.7344; train acc: 0.3073 val acc: 0.3708
+2025-09-04 18:17:50,281 - root - INFO - epoch 5 best val acc: 0.4834, train loss: 1.6904; train acc: 0.4433 val acc: 0.4834
+2025-09-04 18:17:50,410 - root - INFO - epoch 6 best val acc: 0.5203, train loss: 1.6364; train acc: 0.4951 val acc: 0.5203
+2025-09-04 18:17:50,531 - root - INFO - epoch 7 best val acc: 0.5406, train loss: 1.5837; train acc: 0.5209 val acc: 0.5406
+2025-09-04 18:17:50,657 - root - INFO - epoch 8 best val acc: 0.5701, train loss: 1.5372; train acc: 0.5486 val acc: 0.5701
+2025-09-04 18:17:50,792 - root - INFO - epoch 9 best val acc: 0.5793, train loss: 1.4865; train acc: 0.5776 val acc: 0.5793
+2025-09-04 18:17:50,915 - root - INFO - epoch 10 best val acc: 0.5978, train loss: 1.4382; train acc: 0.5893 val acc: 0.5978
+2025-09-04 18:17:51,089 - root - INFO - epoch 11 best val acc: 0.6070, train loss: 1.3933; train acc: 0.5948 val acc: 0.6070
+2025-09-04 18:17:51,198 - root - INFO - epoch 12 best val acc: 0.6273, train loss: 1.3468; train acc: 0.6188 val acc: 0.6273
+2025-09-04 18:17:51,363 - root - INFO - epoch 13 best val acc: 0.6513, train loss: 1.3008; train acc: 0.6552 val acc: 0.6513
+2025-09-04 18:17:51,476 - root - INFO - epoch 14 best val acc: 0.6661, train loss: 1.2565; train acc: 0.6644 val acc: 0.6661
+2025-09-04 18:17:51,644 - root - INFO - epoch 15 best val acc: 0.6790, train loss: 1.2113; train acc: 0.6743 val acc: 0.6790
+2025-09-04 18:17:51,765 - root - INFO - epoch 16 best val acc: 0.6974, train loss: 1.1666; train acc: 0.6909 val acc: 0.6974
+2025-09-04 18:17:51,909 - root - INFO - epoch 17 best val acc: 0.7288, train loss: 1.1224; train acc: 0.7131 val acc: 0.7288
+2025-09-04 18:17:52,035 - root - INFO - epoch 18 best val acc: 0.7417, train loss: 1.0767; train acc: 0.7297 val acc: 0.7417
+2025-09-04 18:17:52,154 - root - INFO - epoch 19 best val acc: 0.7435, train loss: 1.0313; train acc: 0.7426 val acc: 0.7435
+2025-09-04 18:17:52,154 - root - INFO - (Search Stage) best val acc: 0.7435 (epoch: 19)
+2025-09-04 18:17:52,154 - root - INFO - (Search Stage) best val auc: 0.9629 (epoch: 19)
+2025-09-04 18:17:52,154 - root - INFO - Search time for Cora : 2.9334640502929688 seconds
+2025-09-04 18:17:52,155 - root - INFO - Derived z
+2025-09-04 18:17:52,155 - root - INFO - {'agg': [[1.0, 0.0, 0.0], [1.0, 0.0, 0.0], [1.0, 0.0, 0.0], [0.0, 0.0, 1.0]], 'combine': [[0.0, 1.0], [1.0, 0.0], [1.0, 0.0], [0.0, 1.0]], 'act': [[1.0, 0.0], [0.0, 1.0], [0.0, 1.0], [0.0, 1.0]], 'layer_connect': [[0.0, 0.0, 1.0], [1.0, 0.0, 0.0], [0.0, 1.0, 0.0], [0.0, 0.0, 1.0]], 'layer_agg': [[0.0, 0.0, 1.0]], 'pool': [[0.0, 1.0, 0.0]]}
+2025-09-04 18:17:52,155 - root - INFO - Derived arch
+2025-09-04 18:17:52,155 - root - INFO - {'agg': ['sum', 'sum', 'sum', 'max'], 'combine': ['concat', 'sum', 'sum', 'concat'], 'act': ['relu', 'prelu', 'prelu', 'prelu'], 'layer_connect': ['skip_cat', 'stack', 'skip_sum', 'skip_cat'], 'layer_agg': ['max_pooling'], 'pool': ['global_mean_pool']}
+2025-09-04 18:17:52,286 - root - INFO - epoch 0 best test acc: 0.1125, retrain loss: 1.9591; retrain acc: 0.1453 test acc: 0.1125
+2025-09-04 18:17:52,403 - root - INFO - epoch 1 best test acc: 0.1956, retrain loss: 1.8963; retrain acc: 0.2254 test acc: 0.1956
+2025-09-04 18:17:52,609 - root - INFO - epoch 2 best test acc: 0.3469, retrain loss: 1.8417; retrain acc: 0.3732 test acc: 0.3469
+2025-09-04 18:17:52,723 - root - INFO - epoch 3 best test acc: 0.4520, retrain loss: 1.7882; retrain acc: 0.4680 test acc: 0.4520
+2025-09-04 18:17:52,868 - root - INFO - epoch 4 best test acc: 0.4815, retrain loss: 1.7314; retrain acc: 0.4938 test acc: 0.4815
+2025-09-04 18:17:52,981 - root - INFO - epoch 5 best test acc: 0.5092, retrain loss: 1.6727; retrain acc: 0.5086 test acc: 0.5092
+2025-09-04 18:17:53,143 - root - INFO - epoch 6 best test acc: 0.5424, retrain loss: 1.6085; retrain acc: 0.5567 test acc: 0.5424
+2025-09-04 18:17:53,257 - root - INFO - epoch 7 best test acc: 0.6089, retrain loss: 1.5410; retrain acc: 0.6176 test acc: 0.6089
+2025-09-04 18:17:53,362 - root - INFO - epoch 8 best test acc: 0.6255, retrain loss: 1.4749; retrain acc: 0.6767 test acc: 0.6255
+2025-09-04 18:17:53,491 - root - INFO - epoch 9 best test acc: 0.6642, retrain loss: 1.4101; retrain acc: 0.7038 test acc: 0.6642
+2025-09-04 18:17:53,610 - root - INFO - epoch 10 best test acc: 0.6771, retrain loss: 1.3472; retrain acc: 0.7321 test acc: 0.6771
+2025-09-04 18:17:53,831 - root - INFO - epoch 11 best test acc: 0.7011, retrain loss: 1.2876; retrain acc: 0.7635 test acc: 0.7011
+2025-09-04 18:17:53,980 - root - INFO - epoch 12 best test acc: 0.7214, retrain loss: 1.2304; retrain acc: 0.7833 test acc: 0.7214
+2025-09-04 18:17:54,099 - root - INFO - epoch 13 best test acc: 0.7399, retrain loss: 1.1754; retrain acc: 0.8017 test acc: 0.7399
+2025-09-04 18:17:54,221 - root - INFO - epoch 14 best test acc: 0.7491, retrain loss: 1.1230; retrain acc: 0.8091 test acc: 0.7491
+2025-09-04 18:17:54,345 - root - INFO - epoch 15 best test acc: 0.7546, retrain loss: 1.0729; retrain acc: 0.8128 test acc: 0.7546
+2025-09-04 18:17:54,508 - root - INFO - epoch 16 best test acc: 0.7638, retrain loss: 1.0239; retrain acc: 0.8307 test acc: 0.7638
+2025-09-04 18:17:54,619 - root - INFO - epoch 17 best test acc: 0.7749, retrain loss: 0.9766; retrain acc: 0.8393 test acc: 0.7749
+2025-09-04 18:17:54,753 - root - INFO - epoch 18 best test acc: 0.7897, retrain loss: 0.9305; retrain acc: 0.8510 test acc: 0.7897
+2025-09-04 18:17:54,899 - root - INFO - epoch 19 best test acc: 0.7970, retrain loss: 0.8855; retrain acc: 0.8621 test acc: 0.7970
+2025-09-04 18:17:55,121 - root - INFO - epoch 20 best test acc: 0.8044, retrain loss: 0.8420; retrain acc: 0.8750 test acc: 0.8044
+2025-09-04 18:17:55,232 - root - INFO - epoch 21 best test acc: 0.8155, retrain loss: 0.7992; retrain acc: 0.8892 test acc: 0.8155
+2025-09-04 18:17:55,351 - root - INFO - epoch 22 best test acc: 0.8210, retrain loss: 0.7578; retrain acc: 0.8935 test acc: 0.8210
+2025-09-04 18:17:55,517 - root - INFO - epoch 23 best test acc: 0.8229, retrain loss: 0.7190; retrain acc: 0.9009 test acc: 0.8229
+2025-09-04 18:17:55,614 - root - INFO - epoch 24 best test acc: 0.8303, retrain loss: 0.6812; retrain acc: 0.9046 test acc: 0.8303
+2025-09-04 18:17:55,747 - root - INFO - epoch 25 best test acc: 0.8450, retrain loss: 0.6451; retrain acc: 0.9089 test acc: 0.8450
+2025-09-04 18:17:55,849 - root - INFO - epoch 26 best test acc: 0.8506, retrain loss: 0.6109; retrain acc: 0.9138 test acc: 0.8506
+2025-09-04 18:17:55,994 - root - INFO - epoch 27 best test acc: 0.8561, retrain loss: 0.5778; retrain acc: 0.9175 test acc: 0.8561
+2025-09-04 18:17:56,112 - root - INFO - epoch 28 best test acc: 0.8635, retrain loss: 0.5463; retrain acc: 0.9224 test acc: 0.8635
+2025-09-04 18:17:56,234 - root - INFO - epoch 29 best test acc: 0.8653, retrain loss: 0.5161; retrain acc: 0.9280 test acc: 0.8653
+2025-09-04 18:17:56,466 - root - INFO - epoch 30 best test acc: 0.8672, retrain loss: 0.4873; retrain acc: 0.9280 test acc: 0.8672
+2025-09-04 18:17:56,571 - root - INFO - epoch 31 best test acc: 0.8708, retrain loss: 0.4595; retrain acc: 0.9329 test acc: 0.8708
+2025-09-04 18:17:56,708 - root - INFO - epoch 32 best test acc: 0.8708, retrain loss: 0.4330; retrain acc: 0.9366 test acc: 0.8708
+2025-09-04 18:17:56,883 - root - INFO - epoch 33 best test acc: 0.8727, retrain loss: 0.4078; retrain acc: 0.9378 test acc: 0.8727
+2025-09-04 18:17:57,116 - root - INFO - epoch 34 best test acc: 0.8801, retrain loss: 0.3836; retrain acc: 0.9458 test acc: 0.8801
+2025-09-04 18:17:57,255 - root - INFO - epoch 35 best test acc: 0.8801, retrain loss: 0.3603; retrain acc: 0.9483 test acc: 0.8745
+2025-09-04 18:17:57,367 - root - INFO - epoch 36 best test acc: 0.8801, retrain loss: 0.3382; retrain acc: 0.9483 test acc: 0.8727
+2025-09-04 18:17:57,509 - root - INFO - epoch 37 best test acc: 0.8801, retrain loss: 0.3176; retrain acc: 0.9514 test acc: 0.8745
+2025-09-04 18:17:57,653 - root - INFO - epoch 38 best test acc: 0.8801, retrain loss: 0.2975; retrain acc: 0.9532 test acc: 0.8745
+2025-09-04 18:17:57,775 - root - INFO - epoch 39 best test acc: 0.8801, retrain loss: 0.2790; retrain acc: 0.9563 test acc: 0.8745
+2025-09-04 18:17:58,000 - root - INFO - epoch 40 best test acc: 0.8801, retrain loss: 0.2611; retrain acc: 0.9550 test acc: 0.8782
+2025-09-04 18:17:58,188 - root - INFO - epoch 41 best test acc: 0.8801, retrain loss: 0.2442; retrain acc: 0.9587 test acc: 0.8764
+2025-09-04 18:17:58,309 - root - INFO - epoch 42 best test acc: 0.8801, retrain loss: 0.2285; retrain acc: 0.9606 test acc: 0.8727
+2025-09-04 18:17:58,433 - root - INFO - epoch 43 best test acc: 0.8801, retrain loss: 0.2134; retrain acc: 0.9631 test acc: 0.8727
+2025-09-04 18:17:58,558 - root - INFO - epoch 44 best test acc: 0.8801, retrain loss: 0.1992; retrain acc: 0.9655 test acc: 0.8579
+2025-09-04 18:17:58,681 - root - INFO - epoch 45 best test acc: 0.8801, retrain loss: 0.1854; retrain acc: 0.9704 test acc: 0.8653
+2025-09-04 18:17:58,790 - root - INFO - epoch 46 best test acc: 0.8801, retrain loss: 0.1728; retrain acc: 0.9704 test acc: 0.8708
+2025-09-04 18:17:58,953 - root - INFO - epoch 47 best test acc: 0.8801, retrain loss: 0.1609; retrain acc: 0.9717 test acc: 0.8690
+2025-09-04 18:17:59,053 - root - INFO - epoch 48 best test acc: 0.8801, retrain loss: 0.1506; retrain acc: 0.9754 test acc: 0.8690
+2025-09-04 18:17:59,177 - root - INFO - epoch 49 best test acc: 0.8801, retrain loss: 0.1390; retrain acc: 0.9791 test acc: 0.8635
+2025-09-04 18:17:59,375 - root - INFO - epoch 50 best test acc: 0.8801, retrain loss: 0.1339; retrain acc: 0.9766 test acc: 0.8524
+2025-09-04 18:17:59,472 - root - INFO - epoch 51 best test acc: 0.8801, retrain loss: 0.1244; retrain acc: 0.9797 test acc: 0.8598
+2025-09-04 18:17:59,617 - root - INFO - epoch 52 best test acc: 0.8801, retrain loss: 0.1149; retrain acc: 0.9821 test acc: 0.8672
+2025-09-04 18:17:59,716 - root - INFO - epoch 53 best test acc: 0.8801, retrain loss: 0.1093; retrain acc: 0.9852 test acc: 0.8635
+2025-09-04 18:17:59,833 - root - INFO - epoch 54 best test acc: 0.8801, retrain loss: 0.1029; retrain acc: 0.9846 test acc: 0.8616
+2025-09-04 18:17:59,930 - root - INFO - epoch 55 best test acc: 0.8801, retrain loss: 0.0951; retrain acc: 0.9858 test acc: 0.8653
+2025-09-04 18:18:00,052 - root - INFO - epoch 56 best test acc: 0.8801, retrain loss: 0.0930; retrain acc: 0.9865 test acc: 0.8727
+2025-09-04 18:18:00,150 - root - INFO - epoch 57 best test acc: 0.8801, retrain loss: 0.0877; retrain acc: 0.9865 test acc: 0.8708
+2025-09-04 18:18:00,264 - root - INFO - epoch 58 best test acc: 0.8801, retrain loss: 0.0800; retrain acc: 0.9901 test acc: 0.8653
+2025-09-04 18:18:00,368 - root - INFO - epoch 59 best test acc: 0.8801, retrain loss: 0.0790; retrain acc: 0.9908 test acc: 0.8616
+2025-09-04 18:18:00,508 - root - INFO - epoch 60 best test acc: 0.8801, retrain loss: 0.0746; retrain acc: 0.9895 test acc: 0.8635
+2025-09-04 18:18:00,629 - root - INFO - epoch 61 best test acc: 0.8801, retrain loss: 0.0689; retrain acc: 0.9914 test acc: 0.8764
+2025-09-04 18:18:00,868 - root - INFO - epoch 62 best test acc: 0.8801, retrain loss: 0.0651; retrain acc: 0.9926 test acc: 0.8690
+2025-09-04 18:18:00,968 - root - INFO - epoch 63 best test acc: 0.8801, retrain loss: 0.0619; retrain acc: 0.9926 test acc: 0.8561
+2025-09-04 18:18:01,081 - root - INFO - epoch 64 best test acc: 0.8801, retrain loss: 0.0602; retrain acc: 0.9932 test acc: 0.8579
+2025-09-04 18:18:01,188 - root - INFO - epoch 65 best test acc: 0.8801, retrain loss: 0.0551; retrain acc: 0.9938 test acc: 0.8616
+2025-09-04 18:18:01,317 - root - INFO - epoch 66 best test acc: 0.8801, retrain loss: 0.0520; retrain acc: 0.9932 test acc: 0.8745
+2025-09-04 18:18:01,436 - root - INFO - epoch 67 best test acc: 0.8801, retrain loss: 0.0507; retrain acc: 0.9938 test acc: 0.8727
+2025-09-04 18:18:01,564 - root - INFO - epoch 68 best test acc: 0.8801, retrain loss: 0.0468; retrain acc: 0.9951 test acc: 0.8672
+2025-09-04 18:18:01,749 - root - INFO - epoch 69 best test acc: 0.8801, retrain loss: 0.0435; retrain acc: 0.9951 test acc: 0.8635
+2025-09-04 18:18:01,857 - root - INFO - epoch 70 best test acc: 0.8801, retrain loss: 0.0431; retrain acc: 0.9945 test acc: 0.8561
+2025-09-04 18:18:01,984 - root - INFO - epoch 71 best test acc: 0.8801, retrain loss: 0.0404; retrain acc: 0.9951 test acc: 0.8561
+2025-09-04 18:18:02,195 - root - INFO - epoch 72 best test acc: 0.8801, retrain loss: 0.0364; retrain acc: 0.9957 test acc: 0.8616
+2025-09-04 18:18:02,296 - root - INFO - epoch 73 best test acc: 0.8801, retrain loss: 0.0360; retrain acc: 0.9951 test acc: 0.8690
+2025-09-04 18:18:02,413 - root - INFO - epoch 74 best test acc: 0.8801, retrain loss: 0.0346; retrain acc: 0.9951 test acc: 0.8616
+2025-09-04 18:18:02,540 - root - INFO - epoch 75 best test acc: 0.8801, retrain loss: 0.0305; retrain acc: 0.9957 test acc: 0.8708
+2025-09-04 18:18:02,659 - root - INFO - epoch 76 best test acc: 0.8801, retrain loss: 0.0301; retrain acc: 0.9975 test acc: 0.8653
+2025-09-04 18:18:02,828 - root - INFO - epoch 77 best test acc: 0.8801, retrain loss: 0.0298; retrain acc: 0.9975 test acc: 0.8561
+2025-09-04 18:18:02,943 - root - INFO - epoch 78 best test acc: 0.8801, retrain loss: 0.0262; retrain acc: 0.9975 test acc: 0.8524
+2025-09-04 18:18:03,153 - root - INFO - epoch 79 best test acc: 0.8801, retrain loss: 0.0242; retrain acc: 0.9982 test acc: 0.8469
+2025-09-04 18:18:03,256 - root - INFO - epoch 80 best test acc: 0.8801, retrain loss: 0.0238; retrain acc: 0.9982 test acc: 0.8561
+2025-09-04 18:18:03,383 - root - INFO - epoch 81 best test acc: 0.8801, retrain loss: 0.0226; retrain acc: 0.9988 test acc: 0.8653
+2025-09-04 18:18:03,609 - root - INFO - epoch 82 best test acc: 0.8801, retrain loss: 0.0207; retrain acc: 0.9994 test acc: 0.8653
+2025-09-04 18:18:03,707 - root - INFO - epoch 83 best test acc: 0.8801, retrain loss: 0.0197; retrain acc: 0.9994 test acc: 0.8561
+2025-09-04 18:18:03,824 - root - INFO - epoch 84 best test acc: 0.8801, retrain loss: 0.0187; retrain acc: 1.0000 test acc: 0.8506
+2025-09-04 18:18:03,929 - root - INFO - epoch 85 best test acc: 0.8801, retrain loss: 0.0180; retrain acc: 1.0000 test acc: 0.8506
+2025-09-04 18:18:04,107 - root - INFO - epoch 86 best test acc: 0.8801, retrain loss: 0.0173; retrain acc: 1.0000 test acc: 0.8358
+2025-09-04 18:18:04,210 - root - INFO - epoch 87 best test acc: 0.8801, retrain loss: 0.0161; retrain acc: 1.0000 test acc: 0.8358
+2025-09-04 18:18:04,337 - root - INFO - epoch 88 best test acc: 0.8801, retrain loss: 0.0145; retrain acc: 0.9994 test acc: 0.8579
+2025-09-04 18:18:04,448 - root - INFO - epoch 89 best test acc: 0.8801, retrain loss: 0.0142; retrain acc: 0.9994 test acc: 0.8635
+2025-09-04 18:18:04,574 - root - INFO - epoch 90 best test acc: 0.8801, retrain loss: 0.0147; retrain acc: 0.9994 test acc: 0.8672
+2025-09-04 18:18:04,681 - root - INFO - epoch 91 best test acc: 0.8801, retrain loss: 0.0145; retrain acc: 1.0000 test acc: 0.8506
+2025-09-04 18:18:04,899 - root - INFO - epoch 92 best test acc: 0.8801, retrain loss: 0.0124; retrain acc: 1.0000 test acc: 0.8469
+2025-09-04 18:18:05,041 - root - INFO - epoch 93 best test acc: 0.8801, retrain loss: 0.0108; retrain acc: 1.0000 test acc: 0.8487
+2025-09-04 18:18:05,158 - root - INFO - epoch 94 best test acc: 0.8801, retrain loss: 0.0117; retrain acc: 1.0000 test acc: 0.8432
+2025-09-04 18:18:05,283 - root - INFO - epoch 95 best test acc: 0.8801, retrain loss: 0.0133; retrain acc: 0.9994 test acc: 0.8450
+2025-09-04 18:18:05,399 - root - INFO - epoch 96 best test acc: 0.8801, retrain loss: 0.0121; retrain acc: 0.9994 test acc: 0.8395
+2025-09-04 18:18:05,511 - root - INFO - epoch 97 best test acc: 0.8801, retrain loss: 0.0113; retrain acc: 0.9994 test acc: 0.8376
+2025-09-04 18:18:05,637 - root - INFO - epoch 98 best test acc: 0.8801, retrain loss: 0.0099; retrain acc: 0.9994 test acc: 0.8432
+2025-09-04 18:18:05,761 - root - INFO - epoch 99 best test acc: 0.8801, retrain loss: 0.0084; retrain acc: 0.9994 test acc: 0.8506
+2025-09-04 18:18:05,761 - root - INFO - (Retrain Stage) best test acc: 0.8801 (epoch: 34)
+2025-09-04 18:18:05,761 - root - INFO - (Retrain Stage) best test auc: 0.9808 (epoch: 43)

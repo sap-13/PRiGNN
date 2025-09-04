@@ -1,8 +1,11 @@
 Dataset,Method,Seed,Best Test Accuracy
 N/A,Baseline,N/A,
+IMDB-BINARY,LLM-Enhanced,2048,0.69
 IMDB-BINARY,Baseline,2048,
 IMDB-BINARY,Baseline,123,0.785
+IMDB-BINARY,LLM-Enhanced,1024,0.77
 IMDB-BINARY,LLM-Enhanced,2048,0.69
+IMDB-BINARY,LLM-Enhanced,0,0.685
 IMDB-BINARY,Baseline,42,0.77
 IMDB-BINARY,Baseline,123,0.785
 IMDB-BINARY,LLM-Enhanced,0,0.685
@@ -12,6 +15,10 @@ IMDB-BINARY,Baseline,2048,0.7
 IMDB-BINARY,Baseline,1024,0.76
 IMDB-BINARY,LLM-Enhanced,1024,0.77
 IMDB-BINARY,Baseline,42,0.77
+IMDB-BINARY,LLM-Enhanced,123,0.785
+IMDB-BINARY,LLM-Enhanced,42,0.78
+IMDB-BINARY,Baseline,0,
+IMDB-BINARY,Baseline,0,
 IMDB-BINARY,Baseline,0,0.75
 IMDB-BINARY,Baseline,1024,0.76
 IMDB-BINARY,LLM-Enhanced,123,0.785
@@ -35,6 +42,14 @@ PROTEINS,LLM-Enhanced,2048,0.7848
 PROTEINS,LLM-Enhanced,123,0.7848
 PROTEINS,Baseline,123,0.7713
 PROTEINS,Baseline,1024,0.7713
+Cora,Baseline,0,
+Cora,Baseline,0,
+Cora,Baseline,42,0.8801
+Cora,LLM-Enhanced,0,
+Cora,Baseline,0,
+Cora,Baseline,1024,
+Cora,Baseline,0,0.8469
+Cora,Baseline,123,0.8875
 N/A,Baseline,N/A,
 MUTAG,LLM-Enhanced,42,
 MUTAG,LLM-Enhanced,42,0.7632
