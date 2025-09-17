@@ -32,29 +32,6 @@ legend top
 | dashed edge      | optional path (e.g. &#45;&#45;macro_search, &#45;&#45;use_llm_pruning) |
 end legend
 
-package "((b) Inter-layer flow (fixed depth))" {
-    rectangle "<b>h<sup>0</sup></b>" as h0 #AED6F1
-    rectangle "layer_cnt\n(from -gcn_layer)" as layer_cnt
-    rectangle "<b>h<sup>1</sup></b>" as h1 #D4E6F1
-    label "..." as dots
-    rectangle "<b>h<sup>L</sup></b>" as hL #D4E6F1
-    rectangle "layer agg\n(--macro_search on)" as layer_agg #FEF9E7
-    rectangle "<b>h</b>" as h_final #D4E6F1
-    rectangle "ConvE head" as conve <<operator>>
-    rectangle "scores\nsigmoid(h*W)" as scores #FADBD8
-
-    h0 -d-> layer_cnt
-    layer_cnt -d-> h1
-    h1 -d-> dots
-    dots -d-> hL
-    hL -d-> layer_agg
-    layer_agg -d-> h_final
-    h_final -r-> conve
-    conve -r-> scores
-
-    layer_agg -[dashed]- h_final
-}
-
 package "(a) Intra-layer operator search" {
     agent "SearchSpace\n{agg, combine, comp}" as search_space
     agent "LLM pruner\n(--use_llm_pruning)" as llm_pruner
@@ -88,6 +65,29 @@ package "(a) Intra-layer operator search" {
     W_rel --> comp_ops
     comp_ops --> h_v_next
     h_v --> h_v_next
+}
+
+package "((b) Inter-layer flow (fixed depth))" {
+    rectangle "<b>h<sup>0</sup></b>" as h0 #AED6F1
+    rectangle "layer_cnt\n(from -gcn_layer)" as layer_cnt
+    rectangle "<b>h<sup>1</sup></b>" as h1 #D4E6F1
+    label "..." as dots
+    rectangle "<b>h<sup>L</sup></b>" as hL #D4E6F1
+    rectangle "layer agg\n(--macro_search on)" as layer_agg #FEF9E7
+    rectangle "<b>h</b>" as h_final #D4E6F1
+    rectangle "ConvE head" as conve <<operator>>
+    rectangle "scores\nsigmoid(h*W)" as scores #FADBD8
+
+    h0 -d-> layer_cnt
+    layer_cnt -d-> h1
+    h1 -d-> dots
+    dots -d-> hL
+    hL -d-> layer_agg
+    layer_agg -d-> h_final
+    h_final -r-> conve
+    conve -r-> scores
+
+    layer_agg -[dashed]- h_final
 }
 
 @enduml
