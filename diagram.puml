@@ -1,0 +1,90 @@
+@startuml
+!theme vibrant
+
+skinparam defaultFontName sans-serif
+skinparam shadowing false
+skinparam roundCorner 15
+skinparam rectangle {
+    BackgroundColor #EBF5FB
+    BorderColor #0E6BA8
+}
+skinparam agent {
+    BackgroundColor #E8DAEF
+    BorderColor #8E44AD
+}
+skinparam storage {
+    BackgroundColor #E8F8F5
+    BorderColor #16A085
+}
+skinparam rectangle<<operator>> {
+    BackgroundColor #E8DAEF
+    BorderColor #8E44AD
+}
+hide stereotype
+
+legend top
+<font size=14><b>Legend</b></font>
+| <#E8DAEF> | operator block |
+| <#E8F8F5> | learnable weights |
+| <#FADBD8> | intermediate embedding |
+| <#D4E6F1> | hidden embedding |
+| <#FEF9E7> | macro-search layer agg region |
+| dashed border | optional path when --macro_search is enabled |
+end legend
+
+package "(b) Inter-layer flow (fixed depth)" {
+    rectangle "<b>h<sup>0</sup></b>" as h0 #AED6F1
+    rectangle "layer_cnt\n(from -gcn_layer)" as layer_cnt
+    rectangle "<b>h<sup>1</sup></b>" as h1 #D4E6F1
+    label "..." as dots
+    rectangle "<b>h<sup>L</sup></b>" as hL #D4E6F1
+    rectangle "layer agg\n(--macro_search)" as layer_agg #FEF9E7
+    rectangle "<b>h</b>" as h_final #D4E6F1
+    rectangle "ConvE head" as conve <<operator>>
+    rectangle "scores\nsigmoid(h*W)" as scores #FADBD8
+
+    h0 -d-> layer_cnt
+    layer_cnt -d-> h1
+    h1 -d-> dots
+    dots -d-> hL
+    hL -d-> layer_agg
+    layer_agg -d-> h_final
+    h_final -r-> conve
+    conve -r-> scores
+
+    layer_agg -[dashed]- h_final
+}
+
+package "(a) Intra-layer operator search" {
+    agent "SearchSpace\n{agg, combine, comp}" as search_space
+    agent "Gumbel sampler\n(log_alpha, tau)" as gumbel
+    storage "<b>W_loop</b>" as W_loop
+    storage "<b>W_in</b>" as W_in
+    storage "<b>W_out</b>" as W_out
+    storage "<b>W_rel</b>" as W_rel
+    rectangle "<b>h<sup>k</sup><sub>u</sub></b>" as h_u #D4E6F1
+    rectangle "<b>h<sup>k</sup><sub>v</sub></b>" as h_v #D4E6F1
+    rectangle "AGG choices" as agg_ops <<operator>>
+    rectangle "COMBINE choices" as combine_ops <<operator>>
+    rectangle "REL TRANSFORM choices" as comp_ops <<operator>>
+    rectangle "<b>m<sup>k</sup><sub>v</sub></b>" as m_v #FADBD8
+    rectangle "<b>h<sup>k+1</sup><sub>v</sub></b>" as h_v_next #D4E6F1
+
+    search_space -r-> gumbel
+    gumbel -r-> agg_ops
+    gumbel -r-> combine_ops
+    gumbel -r-> comp_ops
+
+    h_u --> agg_ops
+    W_in --> agg_ops
+    agg_ops --> m_v
+    m_v --> combine_ops
+    W_loop --> combine_ops
+    W_out --> combine_ops
+    combine_ops --> comp_ops
+    W_rel --> comp_ops
+    comp_ops --> h_v_next
+    h_v --> h_v_next
+}
+
+@enduml
