@@ -24,21 +24,21 @@ hide stereotype
 
 legend top
 <font size=14><b>Legend</b></font>
-| <#E8DAEF> | operator block |
-| <#E8F8F5> | learnable weights |
-| <#FADBD8> | intermediate embedding |
-| <#D4E6F1> | hidden embedding |
-| <#FEF9E7> | macro-search layer agg region |
-| dashed border | optional path when --macro_search is enabled |
+| <#E8DAEF>   | operator block |
+| <#E8F8F5>   | learnable weights |
+| <#FADBD8>   | intermediate embedding |
+| <#D4E6F1>   | hidden embedding |
+| <#FEF9E7>   | macro-search layer aggregation block |
+| dashed edge      | optional path (enabled by --macro_search) |
 end legend
 
-package "(b) Inter-layer flow (fixed depth)" {
+package "(b) Inter-layer flow (fixed depth))" {
     rectangle "<b>h<sup>0</sup></b>" as h0 #AED6F1
     rectangle "layer_cnt\n(from -gcn_layer)" as layer_cnt
     rectangle "<b>h<sup>1</sup></b>" as h1 #D4E6F1
     label "..." as dots
     rectangle "<b>h<sup>L</sup></b>" as hL #D4E6F1
-    rectangle "layer agg\n(--macro_search)" as layer_agg #FEF9E7
+    rectangle "layer agg\n(--macro_search on)" as layer_agg #FEF9E7
     rectangle "<b>h</b>" as h_final #D4E6F1
     rectangle "ConvE head" as conve <<operator>>
     rectangle "scores\nsigmoid(h*W)" as scores #FADBD8
