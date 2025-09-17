@@ -32,7 +32,7 @@ legend top
 | dashed edge      | optional path (e.g. &#45;&#45;macro_search, &#45;&#45;use_llm_pruning) |
 end legend
 
-package "(b) Inter-layer flow (fixed depth))" {
+package "((b) Inter-layer flow (fixed depth))" {
     rectangle "<b>h<sup>0</sup></b>" as h0 #AED6F1
     rectangle "layer_cnt\n(from -gcn_layer)" as layer_cnt
     rectangle "<b>h<sup>1</sup></b>" as h1 #D4E6F1
